@@ -30,6 +30,34 @@
             </CphTargetCases>
           </value>
         </entry>
+        <entry key="CppFileRunConfiguration::com.jetbrains.cidr.cpp.runfile.CppFileRunConfiguration::CPP_FILE::/Users/sanku/CLionProjects/AlgorithmPractice/problems/codeforces/2278/B.cpp::B. Stakes and Shapes">
+          <value>
+            <CphTargetCases>
+              <option name="cases">
+                <list>
+                  <CphTestCase>
+                    <option name="expectedOutput" value="RPS&#10;SPSS&#10;" />
+                    <option name="id" value="07a64cc0-af29-4ff1-a02c-e7a2ea66525e" />
+                    <option name="input" value="2&#10;0 0 3&#10;5 4 8&#10;" />
+                    <option name="lastResult">
+                      <CphCaseResult>
+                        <option name="actualOutput" value="SSS&#10;SSSSSSSSSSSSSSSSS&#10;" />
+                        <option name="durationMillis" value="14" />
+                        <option name="exitCode" value="0" />
+                        <option name="message" value="First difference at character 1. (CLion C/C++ File runner)" />
+                        <option name="verdict" value="WA" />
+                      </CphCaseResult>
+                    </option>
+                    <option name="name" value="Sample 1" />
+                  </CphTestCase>
+                </list>
+              </option>
+              <option name="displayName" value="B.cpp" />
+              <option name="targetId" value="CppFileRunConfiguration::com.jetbrains.cidr.cpp.runfile.CppFileRunConfiguration::CPP_FILE::/Users/sanku/CLionProjects/AlgorithmPractice/problems/codeforces/2278/B.cpp::B. Stakes and Shapes" />
+              <option name="timeoutMillis" value="2000" />
+            </CphTargetCases>
+          </value>
+        </entry>
         <entry key="no-selected-configuration">
           <value>
             <CphTargetCases>
@@ -50,7 +78,7 @@
     </option>
     <option name="ui">
       <CphUiState>
-        <option name="outputSplitRatio" value="0.49887133182844245" />
+        <option name="outputSplitRatio" value="0.37091988130563797" />
       </CphUiState>
     </option>
   </component>
