@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CphTargetRunnerState">
+    <option name="targets">
+      <map>
+        <entry key="CppFileRunConfiguration::com.jetbrains.cidr.cpp.runfile.CppFileRunConfiguration::CPP_FILE::/Users/sanku/CLionProjects/AlgorithmPractice/problems/codeforces/2278/A.cpp::A. Fraction and Six">
+          <value>
+            <CphTargetCases>
+              <option name="cases">
+                <list>
+                  <CphTestCase>
+                    <option name="expectedOutput" value="NO&#10;NO&#10;NO&#10;NO&#10;NO&#10;NO&#10;NO&#10;NO&#10;NO&#10;YES&#10;" />
+                    <option name="id" value="c56452c0-eefa-4b2f-a551-0d43df2fabfa" />
+                    <option name="input" value="10&#10;5 1&#10;iyxys&#10;y&#10;3 6&#10;six&#10;sixxis&#10;5 1&#10;isxys&#10;y&#10;9 3&#10;sixsixsix&#10;xis&#10;5 2&#10;sixyz&#10;ab&#10;6 3&#10;siixxx&#10;xsi&#10;5 3&#10;sixab&#10;abc&#10;6 2&#10;sixabc&#10;ab&#10;3 1&#10;six&#10;i&#10;35 32&#10;isthisthetestcaseyouwantedtocheckxd&#10;thisdotwantedyoucheckthetestcase&#10;" />
+                    <option name="lastResult">
+                      <CphCaseResult>
+                        <option name="actualOutput" value="NO&#10;NO&#10;NO&#10;NO&#10;NO&#10;NO&#10;NO&#10;NO&#10;NO&#10;YES&#10;" />
+                        <option name="durationMillis" value="13" />
+                        <option name="exitCode" value="0" />
+                        <option name="message" value="Accepted (CLion C/C++ File runner)" />
+                        <option name="verdict" value="AC" />
+                      </CphCaseResult>
+                    </option>
+                    <option name="name" value="Sample 1" />
+                  </CphTestCase>
+                </list>
+              </option>
+              <option name="displayName" value="A.cpp" />
+              <option name="targetId" value="CppFileRunConfiguration::com.jetbrains.cidr.cpp.runfile.CppFileRunConfiguration::CPP_FILE::/Users/sanku/CLionProjects/AlgorithmPractice/problems/codeforces/2278/A.cpp::A. Fraction and Six" />
+            </CphTargetCases>
+          </value>
+        </entry>
+        <entry key="no-selected-configuration">
+          <value>
+            <CphTargetCases>
+              <option name="cases">
+                <list>
+                  <CphTestCase>
+                    <option name="id" value="1c37f454-7cd7-447b-85cf-a59504faf066" />
+                    <option name="name" value="Case 1" />
+                  </CphTestCase>
+                </list>
+              </option>
+              <option name="displayName" value="No run configuration selected" />
+              <option name="targetId" value="no-selected-configuration" />
+            </CphTargetCases>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="ui">
+      <CphUiState>
+        <option name="outputSplitRatio" value="0.49887133182844245" />
+      </CphUiState>
+    </option>
+  </component>
+</project>
