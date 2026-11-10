@@ -67,6 +67,34 @@
             </CphTargetCases>
           </value>
         </entry>
+        <entry key="CppFileRunConfiguration::com.jetbrains.cidr.cpp.runfile.CppFileRunConfiguration::CPP_FILE::/Users/sanku/CLionProjects/AlgorithmPractice/problems/codeforces/2278/D.cpp::D. Lock and Unlock">
+          <value>
+            <CphTargetCases>
+              <option name="cases">
+                <list>
+                  <CphTestCase>
+                    <option name="expectedOutput" value="2 2&#10;0 0&#10;22 20&#10;19 7&#10;61 61&#10;" />
+                    <option name="id" value="29e13fd1-6f2f-4ab4-8b10-532accb1b7b4" />
+                    <option name="input" value="5&#10;3&#10;1 2 3&#10;2&#10;-1 -1&#10;4&#10;18 -2 9 11&#10;9&#10;9 9 8 2 4 4 3 5 3&#10;3&#10;6 67 7&#10;" />
+                    <option name="lastResult">
+                      <CphCaseResult>
+                        <option name="actualOutput" value="2 2&#10;0 0&#10;22 20&#10;19 7&#10;61 61&#10;" />
+                        <option name="durationMillis" value="818" />
+                        <option name="exitCode" value="0" />
+                        <option name="message" value="Accepted (CLion C/C++ File runner)" />
+                        <option name="verdict" value="AC" />
+                      </CphCaseResult>
+                    </option>
+                    <option name="name" value="Sample 1" />
+                  </CphTestCase>
+                </list>
+              </option>
+              <option name="displayName" value="D.cpp" />
+              <option name="targetId" value="CppFileRunConfiguration::com.jetbrains.cidr.cpp.runfile.CppFileRunConfiguration::CPP_FILE::/Users/sanku/CLionProjects/AlgorithmPractice/problems/codeforces/2278/D.cpp::D. Lock and Unlock" />
+              <option name="timeoutMillis" value="2000" />
+            </CphTargetCases>
+          </value>
+        </entry>
         <entry key="no-selected-configuration">
           <value>
             <CphTargetCases>
@@ -87,7 +115,7 @@
     </option>
     <option name="ui">
       <CphUiState>
-        <option name="outputSplitRatio" value="0.37091988130563797" />
+        <option name="outputSplitRatio" value="0.8015873015873016" />
       </CphUiState>
     </option>
   </component>
