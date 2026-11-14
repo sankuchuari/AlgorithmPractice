@@ -141,6 +141,34 @@
             </CphTargetCases>
           </value>
         </entry>
+        <entry key="CppFileRunConfiguration::com.jetbrains.cidr.cpp.runfile.CppFileRunConfiguration::CPP_FILE::/Users/sanku/CLionProjects/AlgorithmPractice/problems/codeforces/2290/B.cpp::B. Stubborn Pen">
+          <value>
+            <CphTargetCases>
+              <option name="cases">
+                <list>
+                  <CphTestCase>
+                    <option name="expectedOutput" value="2&#10;0&#10;0&#10;3&#10;2&#10;" />
+                    <option name="id" value="a26ba59d-e86d-4e8e-bd96-c91dfb1eca21" />
+                    <option name="input" value="5&#10;5&#10;BRRBR&#10;1&#10;R&#10;4&#10;RBRB&#10;3&#10;BBB&#10;6&#10;RRBBRB&#10;" />
+                    <option name="lastResult">
+                      <CphCaseResult>
+                        <option name="actualOutput" value="2&#10;0&#10;0&#10;3&#10;2&#10;" />
+                        <option name="durationMillis" value="653" />
+                        <option name="exitCode" value="0" />
+                        <option name="message" value="Accepted (CLion C/C++ File runner)" />
+                        <option name="verdict" value="AC" />
+                      </CphCaseResult>
+                    </option>
+                    <option name="name" value="Sample 1" />
+                  </CphTestCase>
+                </list>
+              </option>
+              <option name="displayName" value="B.cpp" />
+              <option name="targetId" value="CppFileRunConfiguration::com.jetbrains.cidr.cpp.runfile.CppFileRunConfiguration::CPP_FILE::/Users/sanku/CLionProjects/AlgorithmPractice/problems/codeforces/2290/B.cpp::B. Stubborn Pen" />
+              <option name="timeoutMillis" value="2000" />
+            </CphTargetCases>
+          </value>
+        </entry>
         <entry key="no-selected-configuration">
           <value>
             <CphTargetCases>
