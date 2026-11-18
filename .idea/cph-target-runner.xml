@@ -203,10 +203,8 @@
               <option name="cases">
                 <list>
                   <CphTestCase>
-                    <option name="expectedOutput" value="1&#10;3&#10;0&#10;2&#10;25&#10;" />
-                    <option name="id" value="af1959a4-4bef-44c9-9c7d-1d3a7c895009" />
-                    <option name="input" value="5&#10;4&#10;abca&#10;4&#10;abdc&#10;7&#10;racecar&#10;4&#10;cbad&#10;4&#10;zaza&#10;" />
-                    <option name="name" value="Sample 1" />
+                    <option name="id" value="63aaf1ef-2c18-43ff-8207-b58d07736364" />
+                    <option name="name" value="Case 1" />
                   </CphTestCase>
                 </list>
               </option>
@@ -401,7 +399,7 @@
     <option name="ui">
       <CphUiState>
         <option name="inputHeight" value="220" />
-        <option name="outputSplitRatio" value="0.9789473684210527" />
+        <option name="outputSplitRatio" value="0.5085910652920962" />
       </CphUiState>
     </option>
   </component>
