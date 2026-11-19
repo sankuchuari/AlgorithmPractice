@@ -1,0 +1,5 @@
+beautifulsoup4>=4.12.0
+markdownify>=0.11.6
+playwright>=1.40.0
+mlx-lm>=0.19.0; sys_platform == "darwin" and platform_machine == "arm64"
+argostranslate>=1.9.0; sys_platform != "darwin" or platform_machine != "arm64"
