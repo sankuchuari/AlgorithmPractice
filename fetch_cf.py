@@ -1,5 +1,6 @@
 import operator
 import os
+import platform
 import re
 import subprocess
 import sys
