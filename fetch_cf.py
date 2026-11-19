@@ -244,6 +244,7 @@ def translate_md(p, text, proxy_url):
 
     if is_apple_silicon:
         try:
+            os.environ["HF_HUB_OFFLINE"] = "1"
             from mlx_lm import load, generate
 
             print("Translating with M-series local MLX model...", flush=True)
