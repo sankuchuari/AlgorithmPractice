@@ -3,6 +3,8 @@ import os
 import re
 import subprocess
 import sys
+import urllib.parse
+import urllib.request
 from bs4 import BeautifulSoup
 from markdownify import markdownify as md
 from playwright.sync_api import sync_playwright
