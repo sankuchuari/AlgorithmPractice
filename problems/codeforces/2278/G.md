@@ -1,0 +1,84 @@
+<div align="center" style="margin-bottom:16px;">
+  <h1 style="margin:0 0 6px 0;color:#FFF;font-size:1.7em;">G. 0s and 1s</h1>
+  <div style="color:#ABB2BF;font-size:0.95em;"><b>time:</b> <span style="color:#98C379;">2 seconds</span> | <b>memory:</b> <span style="color:#61AFEF;">256 megabytes</span> | <a href="https://codeforces.com/contest/2278/problem/G" style="color:#56B6C2;">Open in Browser</a></div>
+</div>
+<hr style="border-color:#3E4451;">
+
+<div style="font-size:1.12em;line-height:1.65;color:#DCDFE4;">
+
+A tree is an undirected connected graph with no cycles.
+
+You are given a tree with<span style="font-family:Georgia,serif;font-size:1.06em;color:#A5D6FF;padding:0 2px;"><i>n</i></span>nodes, rooted at node<span style="font-family:Georgia,serif;font-size:1.06em;color:#A5D6FF;padding:0 2px;">1</span>. Each node<span style="font-family:Georgia,serif;font-size:1.06em;color:#A5D6FF;padding:0 2px;"><i>i</i></span>(<span style="font-family:Georgia,serif;font-size:1.06em;color:#A5D6FF;padding:0 2px;">1 ≤ <i>i</i> ≤ <i>n</i></span>) has a binary state, initially equal to<span style="font-family:Georgia,serif;font-size:1.06em;color:#A5D6FF;padding:0 2px;">x<sub>i</sub></span>(<span style="font-family:Georgia,serif;font-size:1.06em;color:#A5D6FF;padding:0 2px;">x<sub>i</sub> ∈ texttt0,texttt1</span>) and a target binary state<span style="font-family:Georgia,serif;font-size:1.06em;color:#A5D6FF;padding:0 2px;">y<sub>i</sub></span>(<span style="font-family:Georgia,serif;font-size:1.06em;color:#A5D6FF;padding:0 2px;">y<sub>i</sub> ∈ texttt0,texttt1</span>) associated with it.
+
+You wish to make the state of every node equal to its target state. To do so, you are allowed to inject energy pulses into the root node. Each time a pulse is injected, it propagates through the tree according to the following procedure:
+
+* If the current state of the node is<span style="font-family:Georgia,serif;font-size:1.06em;color:#A5D6FF;padding:0 2px;">texttt0</span>, its state becomes<span style="font-family:Georgia,serif;font-size:1.06em;color:#A5D6FF;padding:0 2px;">texttt1</span>, and the pulse stops at this node.
+* Otherwise, if the current state of the node is<span style="font-family:Georgia,serif;font-size:1.06em;color:#A5D6FF;padding:0 2px;">texttt1</span>, its state becomes<span style="font-family:Georgia,serif;font-size:1.06em;color:#A5D6FF;padding:0 2px;">texttt0</span>, and the node sends one pulse to each of its children. If it has no children, then the pulse disappears. Every pulse sent to a child follows the same propagation rules.
+
+Determine whether it is possible to make the state of every node equal to its target state. If it is possible, also find the minimum number of energy pulses needed to achieve this goal. Since this number can be very large, report the answer modulo<span style="font-family:Georgia,serif;font-size:1.06em;color:#A5D6FF;padding:0 2px;">998 244 353</span>.
+
+<h2 style="color:#FFF;font-weight:700;font-size:1.3em;margin:22px 0 10px 0;border-bottom:1px solid #3E4451;padding-bottom:4px;">Input</h2>
+
+The first line of the input contains a single integer<span style="font-family:Georgia,serif;font-size:1.06em;color:#A5D6FF;padding:0 2px;"><i>t</i></span>(<span style="font-family:Georgia,serif;font-size:1.06em;color:#A5D6FF;padding:0 2px;">1 ≤ <i>t</i> ≤ 10<sup>4</sup></span>) — the number of test cases. The description of each test case follows.
+
+The first line of each test case contains a single integer<span style="font-family:Georgia,serif;font-size:1.06em;color:#A5D6FF;padding:0 2px;"><i>n</i></span>(<span style="font-family:Georgia,serif;font-size:1.06em;color:#A5D6FF;padding:0 2px;">1 ≤ <i>n</i> ≤ 2 · 10<sup>5</sup></span>) — the number of nodes in the tree.
+
+The next<span style="font-family:Georgia,serif;font-size:1.06em;color:#A5D6FF;padding:0 2px;"><i>n</i>-1</span>lines each contain two integers<span style="font-family:Georgia,serif;font-size:1.06em;color:#A5D6FF;padding:0 2px;"><i>u</i></span>and<span style="font-family:Georgia,serif;font-size:1.06em;color:#A5D6FF;padding:0 2px;"><i>v</i></span>(<span style="font-family:Georgia,serif;font-size:1.06em;color:#A5D6FF;padding:0 2px;">1 ≤ <i>u</i>,<i>v</i> ≤ <i>n</i></span>,<span style="font-family:Georgia,serif;font-size:1.06em;color:#A5D6FF;padding:0 2px;"><i>u</i> ≠ <i>v</i></span>), denoting an undirected edge between nodes<span style="font-family:Georgia,serif;font-size:1.06em;color:#A5D6FF;padding:0 2px;"><i>u</i></span>and<span style="font-family:Georgia,serif;font-size:1.06em;color:#A5D6FF;padding:0 2px;"><i>v</i></span>. It is guaranteed that the given edges form a tree.
+
+The next line contains a binary string<span style="font-family:Georgia,serif;font-size:1.06em;color:#A5D6FF;padding:0 2px;"><i>x</i></span>of length<span style="font-family:Georgia,serif;font-size:1.06em;color:#A5D6FF;padding:0 2px;"><i>n</i></span>, where<span style="font-family:Georgia,serif;font-size:1.06em;color:#A5D6FF;padding:0 2px;">x<sub>i</sub></span>(<span style="font-family:Georgia,serif;font-size:1.06em;color:#A5D6FF;padding:0 2px;">1 ≤ <i>i</i> ≤ <i>n</i></span>,<span style="font-family:Georgia,serif;font-size:1.06em;color:#A5D6FF;padding:0 2px;">x<sub>i</sub> ∈ texttt0,texttt1</span>) represents the initial state of node<span style="font-family:Georgia,serif;font-size:1.06em;color:#A5D6FF;padding:0 2px;"><i>i</i></span>.
+
+The next line contains a binary string<span style="font-family:Georgia,serif;font-size:1.06em;color:#A5D6FF;padding:0 2px;"><i>y</i></span>of length<span style="font-family:Georgia,serif;font-size:1.06em;color:#A5D6FF;padding:0 2px;"><i>n</i></span>, where<span style="font-family:Georgia,serif;font-size:1.06em;color:#A5D6FF;padding:0 2px;">y<sub>i</sub></span>(<span style="font-family:Georgia,serif;font-size:1.06em;color:#A5D6FF;padding:0 2px;">1 ≤ <i>i</i> ≤ <i>n</i></span>,<span style="font-family:Georgia,serif;font-size:1.06em;color:#A5D6FF;padding:0 2px;">y<sub>i</sub> ∈ texttt0,texttt1</span>) represents the target state of node<span style="font-family:Georgia,serif;font-size:1.06em;color:#A5D6FF;padding:0 2px;"><i>i</i></span>.
+
+It is guaranteed that the sum of<span style="font-family:Georgia,serif;font-size:1.06em;color:#A5D6FF;padding:0 2px;"><i>n</i></span>over all test cases does not exceed<span style="font-family:Georgia,serif;font-size:1.06em;color:#A5D6FF;padding:0 2px;">2 · 10<sup>5</sup></span>.
+
+<h2 style="color:#FFF;font-weight:700;font-size:1.3em;margin:22px 0 10px 0;border-bottom:1px solid #3E4451;padding-bottom:4px;">Output</h2>
+
+For each test case, if it is impossible to make the state of every node equal to its target state, output<span style="font-family:Georgia,serif;font-size:1.06em;color:#A5D6FF;padding:0 2px;">-1</span>. Otherwise, print the minimum number of energy pulses needed modulo<span style="font-family:Georgia,serif;font-size:1.06em;color:#A5D6FF;padding:0 2px;">998 244 353</span>.
+
+<h2 style="color:#FFF;font-weight:700;font-size:1.3em;margin:22px 0 10px 0;border-bottom:1px solid #3E4451;padding-bottom:4px;">Example</h2>
+
+<div style="width:96%;margin:0 auto 16px auto;border:1px solid #3E4451;border-radius:6px;overflow:hidden;">
+  <div style="background:#21252B;padding:7px 14px;color:#FFF;font-weight:bold;font-size:1.05em;border-bottom:1px solid #3E4451;">Input</div>
+  <div style="background:#1B1E23;padding:10px 14px;"><pre style="margin:0;width:100%;display:block;font-family:JetBrains Mono,monospace;font-size:1.05em;line-height:1.5;background:transparent;color:#E06C75;">5
+1
+0
+0
+1
+0
+1
+3
+1 2
+1 3
+000
+011
+3
+1 2
+1 3
+000
+010
+3
+1 2
+2 3
+000
+001</pre></div>
+  <div style="background:#21252B;padding:7px 14px;color:#FFF;font-weight:bold;font-size:1.05em;border-bottom:1px solid #3E4451;border-top:1px solid #3E4451;">Output</div>
+  <div style="background:#1B1E23;padding:10px 14px;"><pre style="margin:0;width:100%;display:block;font-family:JetBrains Mono,monospace;font-size:1.05em;line-height:1.5;background:transparent;"><span style="color:#98C379;">0</span>
+<span style="color:#98C379;">1</span>
+<span style="color:#98C379;">2</span>
+<span style="color:#98C379;">-1</span>
+<span style="color:#98C379;">4</span></pre></div>
+</div>
+
+<h2 style="color:#FFF;font-weight:700;font-size:1.3em;margin:22px 0 10px 0;border-bottom:1px solid #3E4451;padding-bottom:4px;">Note</h2>
+
+In the first test case, the initial state is already equal to the target state. Therefore, no energy pulse is required, and the answer is<span style="font-family:Georgia,serif;font-size:1.06em;color:#A5D6FF;padding:0 2px;">0</span>.
+
+In the second test case, the tree contains only the root. Initially, its state is<span style="font-family:Georgia,serif;font-size:1.06em;color:#A5D6FF;padding:0 2px;">x<sub>1</sub> = texttt0</span>.
+
+After one pulse is injected into the root, its state becomes<span style="font-family:Georgia,serif;font-size:1.06em;color:#A5D6FF;padding:0 2px;">texttt1 = y<sub>1</sub></span>, and the pulse stops. Therefore, the answer is<span style="font-family:Georgia,serif;font-size:1.06em;color:#A5D6FF;padding:0 2px;">1</span>.
+
+For the third test case,<span style="font-family:Georgia,serif;font-size:1.06em;color:#A5D6FF;padding:0 2px;">2</span>pulses are needed. The following image shows the propagation of both pulses through the tree.
+
+ ![](https://espresso.codeforces.com/168014c94dd6fbbc147a7f7889e80d58e6517a63.png) Propagation of the two pulses. Pulse<span style="font-family:Georgia,serif;font-size:1.06em;color:#A5D6FF;padding:0 2px;">1</span>yields states<span style="font-family:Georgia,serif;font-size:1.06em;color:#A5D6FF;padding:0 2px;">texttt100</span>, and Pulse<span style="font-family:Georgia,serif;font-size:1.06em;color:#A5D6FF;padding:0 2px;">2</span>propagates to achieve the target<span style="font-family:Georgia,serif;font-size:1.06em;color:#A5D6FF;padding:0 2px;">texttt011</span>.
+
+</div>
