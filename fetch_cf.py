@@ -257,7 +257,7 @@ def translate_md(p, text, proxy_url):
                     [
                         {
                             "role": "system",
-                            "content": "你是算法竞赛翻译专家。将所有英文单词和句子全部翻译为简体中文，原样保留所有 CFTOKEN...END 占位符，只输出译文，不要任何解释。",
+                            "content": "你是算法竞赛翻译专家。将所有英文单词和句子全部翻译为简体中文，原样保留所有 CFTOKEN...END 占位符，只输出译文，不要任何解释，输出前请逐子检查是否有漏翻译的单词。",
                         },
                         {"role": "user", "content": s},
                     ],
