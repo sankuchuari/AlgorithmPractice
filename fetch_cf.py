@@ -369,6 +369,20 @@ def parse_and_save(p, contest_id, index, url, html, proxy_url):
             st = base + "color:#E06C75;"
             tt.replace_with(put(f'<code style="{st}">{txt}</code>'))
 
+    def with_line_numbers(raw_text, text_color):
+        rows = []
+        for row_idx, line in enumerate(raw_text.splitlines(), 1):
+            num_st = (
+                "display:inline-block;width:2.2em;text-align:right;"
+                "padding-right:10px;margin-right:10px;color:#5C6370;"
+                "border-right:1px solid #2C313A;user-select:none;"
+            )
+            rows.append(
+                f'<div><span style="{num_st}">{row_idx}</span>'
+                f'<span style="color:{text_color};">{line}</span></div>'
+            )
+        return "".join(rows)
+
     for sdiv in soup.find_all("div", class_="sample-test"):
         ins = sdiv.find_all("div", class_="input")
         outs = sdiv.find_all("div", class_="output")
