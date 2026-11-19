@@ -416,7 +416,7 @@ def parse_and_save(p, contest_id, index, url, html, proxy_url):
                 f'<div style="{box}">\n'
                 f'  <div style="{hdr}">Input</div>\n'
                 f'  <div style="background:#1B1E23;padding:10px 14px;">'
-                f'<pre style="{pre_st}color:#E06C75;">{it}</pre></div>\n'
+                f'<pre style="{pre_st}">{it}</pre></div>\n'
                 f'  <div style="{hdr}border-top:1px solid #3E4451;">Output</div>\n'
                 f'  <div style="background:#1B1E23;padding:10px 14px;">'
                 f'<pre style="{pre_st}">{ot}</pre></div>\n'
