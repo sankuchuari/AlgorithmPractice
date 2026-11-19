@@ -126,7 +126,7 @@ def tex_to_html(tex):
     p_frac = re.escape(BS) + r"frac\{([^{}]+)\}\{([^{}]+)\}"
     s = re.sub(p_frac, r"(\1)/(\2)", s)
     s = re.sub(re.escape(BS) + r"sqrt\{([^{}]+)\}", r"√(\1)", s)
-    p_txt = re.escape(BS) + r"(?:text|mathrm|mathbf|mathit|mathcal)\{([^{}]+)\}"
+    p_txt = re.escape(BS) + r"(?:text|texttt|textsf|mathrm|mathbf|mathit|mathcal)\{([^{}]+)\}"
     s = re.sub(p_txt, r"\1", s)
     for cmd in sorted(LATEX_SYMBOLS.keys(), key=len, reverse=True):
         s = s.replace(cmd, LATEX_SYMBOLS[cmd])
