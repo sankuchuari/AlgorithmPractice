@@ -18,6 +18,8 @@ SL = chr(47)
 GET0 = operator.itemgetter(0)
 
 LATEX_SYMBOLS = {
+    BS + "lt": "<",
+    BS + "gt": ">",
     BS + "le": "≤",
     BS + "leq": "≤",
     BS + "ge": "≥",
