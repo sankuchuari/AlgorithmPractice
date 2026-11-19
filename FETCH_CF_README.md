@@ -5,7 +5,7 @@
 ## ✨ 核心特性
 
 - **双语对照输出**：每次抓取自动在 `problems/codeforces/<contest_id>/` 下生成英文原版（`<index>.md`）与中文翻译版（`<index>_zh.md`）。
-- **智能网络调度**：默认优先直连 Codeforces（3 次快速重试），直连受阻时自动读取\系统 HTTP/SOCKS 代理无缝切换。
+- **智能网络调度**：默认优先直连 Codeforces（3 次快速重试），直连受阻时自动读取系统 HTTP/SOCKS 代理无缝切换。
 - **跨平台离线神经网络翻译**：
     - 优先尝试 Google 翻译接口；
     - 无代理或离线环境下自动降级为本地神经网络推理：**Apple Silicon (M 系列芯片)** 调用原生 `MLX` (`Qwen2.5-3B-Instruct-4bit`) 加速推理；**其他平台 (Windows / Linux / Intel Mac)** 自动切换 `Argos Translate` 离线模型，全程精准保留公式与样式占位符。
