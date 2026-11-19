@@ -119,7 +119,7 @@ def get_system_proxy():
 
 
 def tex_to_html(tex):
-    s = tex.strip()
+    s = html_lib.unescape(tex.strip())
     p_frac = re.escape(BS) + r"frac\{([^{}]+)\}\{([^{}]+)\}"
     s = re.sub(p_frac, r"(\1)/(\2)", s)
     s = re.sub(re.escape(BS) + r"sqrt\{([^{}]+)\}", r"√(\1)", s)
