@@ -2,6 +2,8 @@
 
 一个专为本地 IDE 刷题设计的 Codeforces / Gym 题面抓取脚本。支持自动解析 LaTeX 数学公式、暗色主题 HTML 排版，并通过**在线 + 本地离线神经网络双通道**自动生成中英双语 Markdown 题面。
 
+---
+
 ## ✨ 核心特性
 
 - **双语对照输出**：每次抓取自动在 `problems/codeforces/<contest_id>/` 下生成英文原版（`<index>.md`）与中文翻译版（`<index>_zh.md`）。
@@ -10,6 +12,24 @@
     - 优先尝试 Google 翻译接口；
     - 无代理或离线环境下自动降级为本地神经网络推理：**Apple Silicon (M 系列芯片)** 调用原生 `MLX` (`Qwen2.5-3B-Instruct-4bit`) 加速推理；**其他平台 (Windows / Linux / Intel Mac)** 自动切换 `Argos Translate` 离线模型，全程精准保留公式与样式占位符。
 - **专为暗色 IDE 定制的排版**：内置暗色主题高对比度配色，自动转换上下标与希腊字母等常用 LaTeX 符号，高亮输入输出样例及 `YES/NO`、`Alice/Bob` 等博弈关键词。
+
+## ⚙️ 本地模型进阶配置与注意事项
+
+### 1. 更换更大参数的本地 MLX 模型（仅 Apple Silicon）
+脚本默认使用轻量级的 `mlx-community/Qwen2.5-3B-Instruct-4bit` 以兼顾首次下载速度与内存占用。在离线直连状态下，3B 小模型偶尔可能会遗漏个别句首英文单词（如 `Initially`）；若对翻译准确度有更高要求且设备内存充足（如 16GB 及以上），可手动替换为 7B 模型：
+
+1. **开启代理并预下载模型权重**（首次拉取约 4GB，需连接 Hugging Face）：
+   ```bash
+   python3 -c 'from mlx_lm import load; load("mlx-community/Qwen2.5-7B-Instruct-4bit")'
+   ```
+2. **修改 `fetch_cf.py` 中的模型名称(第252行)**：
+   ```python
+   _MLX_CACHE = load("mlx-community/Qwen2.5-7B-Instruct-4bit")
+   ```
+
+### 2. 离线加载与网络注意
+- **强制本地缓存**：脚本在调用 MLX 前默认设置了 `os.environ["HF_HUB_OFFLINE"] = "1"`，避免无代理直连时因反复校验 Hugging Face 远程哈希而卡死。首次下载新模型前，请通过上述终端命令单独拉取（该命令不走脚本离线环境变量），拉取完成后即可全程断网离线使用。
+- **Linux / Windows 离线包**：非 Apple Silicon 设备在首次使用 `argostranslate` 前，需联网执行一次语言包安装命令（见上文“环境安装”第 3 步），之后同样支持完全离线运行。
 
 ---
 
