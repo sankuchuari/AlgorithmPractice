@@ -408,8 +408,10 @@ def parse_and_save(p, contest_id, index, url, html, proxy_url):
                 if pre:
                     for br in pre.find_all(["br", "div"]):
                         br.replace_with("\n" + br.get_text())
-            it = ip.get_text().strip() if ip else ""
-            ot = colorize_output(op.get_text().strip() if op else "")
+            it = with_line_numbers(ip.get_text().strip() if ip else "", "#E06C75")
+            ot = with_line_numbers(
+                colorize_output(op.get_text().strip() if op else ""), "#98C379"
+            )
             s_html += (
                 f'<div style="{box}">\n'
                 f'  <div style="{hdr}">Input</div>\n'
