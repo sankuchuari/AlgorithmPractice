@@ -427,7 +427,7 @@
     <option name="ui">
       <CphUiState>
         <option name="inputHeight" value="220" />
-        <option name="outputSplitRatio" value="0.42391304347826086" />
+        <option name="outputSplitRatio" value="0.4125" />
       </CphUiState>
     </option>
   </component>

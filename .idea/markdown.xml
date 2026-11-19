@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="MarkdownSettings">
+    <option name="customStylesheetText" value="/* 强制让行内公式图片紧跟文字，不居中、不换行 */&#10;p img, li img, blockquote img, td img {&#10;  display: inline !important;&#10;  margin: 0 2px !important;&#10;  vertical-align: -0.22em !important;&#10;  max-width: none !important;&#10;}&#10;&#10;/* 独立公式块依然保持居中显示 */&#10;div[align=&quot;center&quot;] img {&#10;  display: block !important;&#10;  margin: 10px auto !important;&#10;}&#10;" />
+  </component>
+</project>
