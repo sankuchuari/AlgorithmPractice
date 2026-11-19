@@ -31,7 +31,7 @@ AlgorithmPractice/
 └── requirements.txt        # Python 自动化脚本依赖清单
 ```
 
-## 🛠️ 自动化刷题工具 (`fetch_cf.py`)
+## 🛠️ 自动化题面获取工具 (`fetch_cf.py`)
 
 内置基于 Playwright 与本地离线神经网络的题面抓取脚本，支持在 CLion 中一键拉取题面并分屏全屏做题：
 
