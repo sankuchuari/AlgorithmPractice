@@ -18,7 +18,7 @@
 ### 1. 更换更大参数的本地 MLX 模型（仅 Apple Silicon）
 脚本默认使用轻量级的 `mlx-community/Qwen2.5-3B-Instruct-4bit` 以兼顾首次下载速度与内存占用。在离线直连状态下，3B 小模型偶尔可能会遗漏个别句首英文单词（如 `Initially`）；若对翻译准确度有更高要求且设备内存充足（如 16GB 及以上），可手动替换为 7B 模型：
 
-1. **开启代理并预下载模型权重**（首次拉取约 4GB，需连接 Hugging Face）：
+1. **开启代理并预下载模型权重**：
    ```bash
    python3 -c 'from mlx_lm import load; load("mlx-community/Qwen2.5-7B-Instruct-4bit")'
    ```
