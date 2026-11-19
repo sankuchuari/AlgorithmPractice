@@ -214,6 +214,34 @@
             </CphTargetCases>
           </value>
         </entry>
+        <entry key="CppFileRunConfiguration::com.jetbrains.cidr.cpp.runfile.CppFileRunConfiguration::CPP_FILE::/Users/sanku/CLionProjects/AlgorithmPractice/problems/codeforces/2290/E.cpp::E. Avalanche">
+          <value>
+            <CphTargetCases>
+              <option name="cases">
+                <list>
+                  <CphTestCase>
+                    <option name="expectedOutput" value="Alice&#10;Bob&#10;Alice&#10;Alice&#10;Bob&#10;" />
+                    <option name="id" value="ebbce93d-b2fb-4f51-9a54-146f3b3cf8ba" />
+                    <option name="input" value="5&#10;2 1&#10;1 1&#10;3 2&#10;0 0 1&#10;4 1&#10;0 0 1 0&#10;5 2&#10;1 2 3 4 5&#10;3 1&#10;2 5 2&#10;" />
+                    <option name="lastResult">
+                      <CphCaseResult>
+                        <option name="actualOutput" value="Alice&#10;Bob&#10;Alice&#10;Alice&#10;Bob&#10;" />
+                        <option name="durationMillis" value="13" />
+                        <option name="exitCode" value="0" />
+                        <option name="message" value="Accepted (CLion C/C++ File runner)" />
+                        <option name="verdict" value="AC" />
+                      </CphCaseResult>
+                    </option>
+                    <option name="name" value="Sample 1" />
+                  </CphTestCase>
+                </list>
+              </option>
+              <option name="displayName" value="E.cpp" />
+              <option name="targetId" value="CppFileRunConfiguration::com.jetbrains.cidr.cpp.runfile.CppFileRunConfiguration::CPP_FILE::/Users/sanku/CLionProjects/AlgorithmPractice/problems/codeforces/2290/E.cpp::E. Avalanche" />
+              <option name="timeoutMillis" value="2000" />
+            </CphTargetCases>
+          </value>
+        </entry>
         <entry key="CppFileRunConfiguration::com.jetbrains.cidr.cpp.runfile.CppFileRunConfiguration::CPP_FILE::/Users/sanku/CLionProjects/AlgorithmPractice/problems/generic/Virtual_Judge_-_2026_11_15排位赛/A.cpp::A - Iskander and Drawings">
           <value>
             <CphTargetCases>
@@ -399,7 +427,7 @@
     <option name="ui">
       <CphUiState>
         <option name="inputHeight" value="220" />
-        <option name="outputSplitRatio" value="0.5085910652920962" />
+        <option name="outputSplitRatio" value="0.42391304347826086" />
       </CphUiState>
     </option>
   </component>
