@@ -253,7 +253,7 @@ def translate_md(p, text, proxy_url):
                     [
                         {
                             "role": "system",
-                            "content": "你是算法竞赛翻译专家。将必须将所有英文单词和句子全部翻译为地道简体中文，原样保留人名如 Alice/Bob 及所有 CFTOKEN...END 占位符，严禁遗漏未翻译的英文单词，只输出译文，不要任何解释。",
+                            "content": "你是算法竞赛翻译专家。将所有英文单词和句子全部翻译为地道简体中文，原样保留人名如 Alice/Bob 及所有 CFTOKEN...END 占位符，别遗漏未翻译的英文单词，只输出译文，不要任何解释。",
                         },
                         {"role": "user", "content": s},
                     ],
