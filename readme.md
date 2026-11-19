@@ -39,7 +39,7 @@ AlgorithmPractice/
 - **全平台代理调度**：自动读取 Windows / macOS / Linux 系统代理，直连受阻时无缝切换。
 - **跨平台离线翻译**：优先使用在线翻译接口，无代理或离线环境下自动降级为本地推理（Apple Silicon M 系列芯片使用原生 `MLX` 加速，其他平台自动切换 `Argos Translate`）。
 
-> 详细安装步骤、命令行用法及 CLion 快捷键配置请查阅：[fetch_cf.py 使用指南](./FETCH_CF_README.md)（请按实际文件名修改链接）。
+> 详细安装步骤、命令行用法及 CLion 快捷键配置请查阅：[fetch_cf.py 使用指南](./FETCH_CF_README.md)。
 
 ## ⚡ 快速开始
 
