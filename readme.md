@@ -14,7 +14,7 @@ Personal repository for algorithm practice and competitive programming records.
 
 # AlgorithmPractice
 
-个人算法竞赛（ICPC / Codeforces / AtCoder）题解与刷题代码仓库，包含 C++17 题解源码、自动题面抓取渲染工具及双语题面归档。
+个人算法竞赛（ICPC / Codeforces / AtCoder）题解与刷题代码仓库，包含 C++ 题解源码、自动题面抓取渲染工具及双语题面归档。
 
 ## 📂 仓库结构
 
