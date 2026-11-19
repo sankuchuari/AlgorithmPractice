@@ -8,23 +8,23 @@
 
 你被给定一个长度为<span style="font-family:Georgia,serif;font-size:1.06em;color:#A5D6FF;padding:0 2px;"><i>n</i></span>仅由小写拉丁字母组成的字符串<span style="font-family:Georgia,serif;font-size:1.06em;color:#A5D6FF;padding:0 2px;"><i>s</i></span>。
 
-在一个操作中，你选择一个除了 a 以外的小写字母<span style="font-family:Georgia,serif;font-size:1.06em;color:#A5D6FF;padding:0 2px;"><i>x</i></span>，并将<span style="font-family:Georgia,serif;font-size:1.06em;color:#A5D6FF;padding:0 2px;"><i>x</i></span>中所有出现的字母替换为其前面的字母。例如，如果<span style="font-family:Georgia,serif;font-size:1.06em;color:#A5D6FF;padding:0 2px;"><i>s</i></span>，一个以<span style="font-family:Georgia,serif;font-size:1.06em;color:#A5D6FF;padding:0 2px;"><i>s</i> = bcab</span>为操作的字母序列会变成 bbab，随后一个以<span style="font-family:Georgia,serif;font-size:1.06em;color:#A5D6FF;padding:0 2px;"><i>x</i> = <i>c</i></span>为操作的字母序列会将所有的 b 替换为 a，变成 aaaa。如果<span style="font-family:Georgia,serif;font-size:1.06em;color:#A5D6FF;padding:0 2px;"><i>x</i> = <i>b</i></span>在<span style="font-family:Georgia,serif;font-size:1.06em;color:#A5D6FF;padding:0 2px;"><i>x</i></span>中不存在，那么这个操作不会改变<span style="font-family:Georgia,serif;font-size:1.06em;color:#A5D6FF;padding:0 2px;"><i>s</i></span>。
+在一个操作中，你选择一个除了 a 以外的小写字母<span style="font-family:Georgia,serif;font-size:1.06em;color:#A5D6FF;padding:0 2px;"><i>x</i></span>，并将<span style="font-family:Georgia,serif;font-size:1.06em;color:#A5D6FF;padding:0 2px;"><i>x</i></span>中所有出现的字母替换为其前面的字母。例如，如果<span style="font-family:Georgia,serif;font-size:1.06em;color:#A5D6FF;padding:0 2px;"><i>s</i></span>，一个以<span style="font-family:Georgia,serif;font-size:1.06em;color:#A5D6FF;padding:0 2px;"><i>s</i> = bcab</span>为操作符的操作将其变为 bbab，随后一个以<span style="font-family:Georgia,serif;font-size:1.06em;color:#A5D6FF;padding:0 2px;"><i>x</i> = <i>c</i></span>为操作符的操作将其变为 aaaa。如果<span style="font-family:Georgia,serif;font-size:1.06em;color:#A5D6FF;padding:0 2px;"><i>x</i> = <i>b</i></span>在<span style="font-family:Georgia,serif;font-size:1.06em;color:#A5D6FF;padding:0 2px;"><i>x</i></span>中不存在，该操作不会改变<span style="font-family:Georgia,serif;font-size:1.06em;color:#A5D6FF;padding:0 2px;"><i>s</i></span>。
 
-找出将<span style="font-family:Georgia,serif;font-size:1.06em;color:#A5D6FF;padding:0 2px;"><i>s</i></span>变为 palindrome 所需的最小操作数。palindrome 是一个从左读和从右读都一样的字符串。
+找出将<span style="font-family:Georgia,serif;font-size:1.06em;color:#A5D6FF;padding:0 2px;"><i>s</i></span>变为回文串所需的最小操作数。回文是一个从左读和从右读都一样的字符串。
 
 <h2 style="color:#FFF;font-weight:700;font-size:1.3em;margin:22px 0 10px 0;border-bottom:1px solid #3E4451;padding-bottom:4px;">Input</h2>
 
 每个测试包含多个测试用例。第一行包含测试用例的数量<span style="font-family:Georgia,serif;font-size:1.06em;color:#A5D6FF;padding:0 2px;"><i>t</i></span>（<span style="font-family:Georgia,serif;font-size:1.06em;color:#A5D6FF;padding:0 2px;">1 ≤ <i>t</i> ≤ 10<sup>4</sup></span>）。测试用例的描述随后。
 
-第一行每个测试用例中都包含一个整数<span style="font-family:Georgia,serif;font-size:1.06em;color:#A5D6FF;padding:0 2px;"><i>n</i></span>（<span style="font-family:Georgia,serif;font-size:1.06em;color:#A5D6FF;padding:0 2px;">1 ≤ <i>n</i> ≤ 2· 10<sup>5</sup></span>） — 字符串的长度。
+第一行每个测试用例包含一个整数<span style="font-family:Georgia,serif;font-size:1.06em;color:#A5D6FF;padding:0 2px;"><i>n</i></span>（<span style="font-family:Georgia,serif;font-size:1.06em;color:#A5D6FF;padding:0 2px;">1 ≤ <i>n</i> ≤ 2· 10<sup>5</sup></span>） — 字符串的长度。
 
-第二行每个测试用例包含一个长度为<span style="font-family:Georgia,serif;font-size:1.06em;color:#A5D6FF;padding:0 2px;"><i>n</i></span>仅由小写拉丁字母组成的字符串<span style="font-family:Georgia,serif;font-size:1.06em;color:#A5D6FF;padding:0 2px;"><i>s</i></span>。
+第二行每个测试用例包含一个长度为<span style="font-family:Georgia,serif;font-size:1.06em;color:#A5D6FF;padding:0 2px;"><i>n</i></span>的由小写字母组成的字符串<span style="font-family:Georgia,serif;font-size:1.06em;color:#A5D6FF;padding:0 2px;"><i>s</i></span>。
 
 保证所有测试用例中<span style="font-family:Georgia,serif;font-size:1.06em;color:#A5D6FF;padding:0 2px;"><i>n</i></span>的和不超过<span style="font-family:Georgia,serif;font-size:1.06em;color:#A5D6FF;padding:0 2px;">2· 10<sup>5</sup></span>。
 
 <h2 style="color:#FFF;font-weight:700;font-size:1.3em;margin:22px 0 10px 0;border-bottom:1px solid #3E4451;padding-bottom:4px;">Output</h2>
 
-对于每个测试用例，打印一个整数 — 使<span style="font-family:Georgia,serif;font-size:1.06em;color:#A5D6FF;padding:0 2px;"><i>s</i></span>成为回文所需的最小操作数。
+对于每个测试用例，打印一个整数——将<span style="font-family:Georgia,serif;font-size:1.06em;color:#A5D6FF;padding:0 2px;"><i>s</i></span>转换为回文所需的最小操作数。
 
 <h2 style="color:#FFF;font-weight:700;font-size:1.3em;margin:22px 0 10px 0;border-bottom:1px solid #3E4451;padding-bottom:4px;">Example</h2>
 
@@ -37,9 +37,9 @@
 
 <h2 style="color:#FFF;font-weight:700;font-size:1.3em;margin:22px 0 10px 0;border-bottom:1px solid #3E4451;padding-bottom:4px;">Note</h2>
 
-在第一组测试用例中，进行一次操作<span style="font-family:Georgia,serif;font-size:1.06em;color:#A5D6FF;padding:0 2px;"><i>x</i> = <i>c</i></span>，可以使字符串abca变成回文abba。
+在第一组测试用例中，一次操作<span style="font-family:Georgia,serif;font-size:1.06em;color:#A5D6FF;padding:0 2px;"><i>x</i> = <i>c</i></span>可以将 abca 转换为回文 abba。
 
-在第二组测试案例中，您可以使用<span style="font-family:Georgia,serif;font-size:1.06em;color:#A5D6FF;padding:0 2px;"><i>x</i> = <i>d</i></span>，<span style="font-family:Georgia,serif;font-size:1.06em;color:#A5D6FF;padding:0 2px;"><i>x</i> = <i>c</i></span>，和<span style="font-family:Georgia,serif;font-size:1.06em;color:#A5D6FF;padding:0 2px;"><i>x</i> = <i>b</i></span>进行操作： abdc<span style="font-family:Georgia,serif;font-size:1.06em;color:#A5D6FF;padding:0 2px;">→</span>abcc<span style="font-family:Georgia,serif;font-size:1.06em;color:#A5D6FF;padding:0 2px;">→</span>abbb<span style="font-family:Georgia,serif;font-size:1.06em;color:#A5D6FF;padding:0 2px;">→</span>aaaa 。第二个操作改变了两个字母 c ，第三个操作改变了所有三个字母 b 。
+在第二组测试用例中，您可以使用<span style="font-family:Georgia,serif;font-size:1.06em;color:#A5D6FF;padding:0 2px;"><i>x</i> = <i>d</i></span>，<span style="font-family:Georgia,serif;font-size:1.06em;color:#A5D6FF;padding:0 2px;"><i>x</i> = <i>c</i></span>，和<span style="font-family:Georgia,serif;font-size:1.06em;color:#A5D6FF;padding:0 2px;"><i>x</i> = <i>b</i></span>： abdc<span style="font-family:Georgia,serif;font-size:1.06em;color:#A5D6FF;padding:0 2px;">→</span>abcc<span style="font-family:Georgia,serif;font-size:1.06em;color:#A5D6FF;padding:0 2px;">→</span>abbb<span style="font-family:Georgia,serif;font-size:1.06em;color:#A5D6FF;padding:0 2px;">→</span>aaaa 。第二步操作改变了两个字母 c ，第三步操作改变了所有三个字母 b 。
 
 在第三组测试案例中，字符串本身就是回文。
 
