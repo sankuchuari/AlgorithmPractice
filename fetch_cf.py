@@ -93,14 +93,12 @@ def build_url(*parts):
     return SL.join(str(x).strip(SL) for x in parts)
 
 def get_system_proxy():
-    # 1. 优先读取环境变量 & 标准库跨平台系统代理（自动兼容 Windows 注册表 / Linux / macOS）
     proxies = urllib.request.getproxies()
     for key in ("https", "http", "all", "socks", "socks5"):
         if proxies.get(key):
             p = proxies[key]
             return p if "://" in p else f"http:{SL}{SL}{p}"
 
-    # 2. macOS 兜底：部分代理工具仅写入 scutil 系统配置而不注入环境变量
     if platform.system() == "Darwin":
         try:
             out = subprocess.check_output(["scutil", "--proxy"], text=True)
@@ -211,7 +209,6 @@ def translate_md(p, text, proxy_url):
     if not batch:
         return text
 
-    # 1. 优先尝试 Google 翻译（海外直连或本地有代理时秒出）
     joined = "\n".join(batch)
     q = urllib.parse.quote(joined)
     gg_url = (
@@ -283,7 +280,6 @@ def translate_md(p, text, proxy_url):
         print(f"Local translation skipped: {e}", flush=True)
 
     return "\n".join(lines)
-
 
 
 def parse_and_save(p, contest_id, index, url, html, proxy_url):
@@ -446,7 +442,6 @@ def parse_and_save(p, contest_id, index, url, html, proxy_url):
         with open(path, "w", encoding="utf-8") as f:
             f.write(re.sub(r"\n{3,}", "\n\n", full).strip())
         print(f"Saved: {path}", flush=True)
-
 
 
 def run(contest_id, index=None):
