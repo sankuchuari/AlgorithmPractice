@@ -9,8 +9,7 @@ import urllib.request
 from bs4 import BeautifulSoup
 from markdownify import markdownify as md
 from playwright.sync_api import sync_playwright
-import platform
-import urllib.parse
+
 _MLX_CACHE = None
 
 BS = chr(92)
