@@ -23,7 +23,7 @@ AlgorithmPractice/
 ├── problems/               # 按 OJ 平台与比赛场次分类的题解与题面
 │   └── codeforces/
 │       └── <contest_id>/
-│           ├── A.cpp        # C++17 题解代码
+│           ├── A.cpp        # C++ 题解代码
 │           ├── A.md         # 英文题面（暗色主题渲染）
 │           └── A_zh.md      # 中文题面（自动翻译渲染）
 ├── fetch_cf.py             # Codeforces / Gym 题面自动抓取与双语渲染脚本
